@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Np/XkrBJF4x7VcXGCCS/RRh5H9+W45DdrMMxT+dH8G0='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-1/EslfkFNKhCjvIOVvgGl242MISqWtYtei82H1SWTl8='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <title>Margo · retour de la banque</title>
 <style>
   :root { color-scheme: dark; }
@@ -31,7 +31,9 @@
 <script>
 (function () {
   var q = location.search || '';
-  var target = 'margo://callback' + q;
+  // iPhone / iPad : lien profond vers l'appli. PC : l'appli Windows (ou le serveur Margo) écoute sur localhost.
+  var ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var target = (ios ? 'margo://callback' : 'http://localhost:8787/eb/callback') + q;
   document.getElementById('go').href = target;
   document.getElementById('url').value = target;
   if (/[?&](code|error)=/.test(q)) { location.replace(target); }
