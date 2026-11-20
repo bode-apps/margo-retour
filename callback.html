@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Np/XkrBJF4x7VcXGCCS/RRh5H9+W45DdrMMxT+dH8G0='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Margo · retour de la banque</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0b0e14; color: #e6e9ef; font: 16px/1.5 system-ui, -apple-system, sans-serif; }
+  main { max-width: 420px; padding: 24px; text-align: center; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  p { color: #a7adba; margin: 0 0 20px; }
+  a.btn { display: inline-block; padding: 14px 22px; border-radius: 12px; background: #2dd4a7; color: #06281f; font-weight: 700; text-decoration: none; }
+  details { margin-top: 28px; text-align: left; color: #a7adba; font-size: 14px; }
+  textarea { width: 100%; box-sizing: border-box; margin-top: 8px; height: 90px; background: #151a24; color: #e6e9ef; border: 1px solid #2a3140; border-radius: 8px; padding: 8px; font: 12px ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Connexion bancaire terminée</h1>
+  <p id="msg">Retour dans Margo…</p>
+  <a class="btn" id="go" href="margo://callback">Revenir dans Margo</a>
+  <details>
+    <summary>Ça ne s'ouvre pas ?</summary>
+    Copie cette adresse, puis colle-la dans Margo → Réglages → Banque → « Coller le lien de retour ».
+    <textarea id="url" readonly></textarea>
+  </details>
+</main>
+<script>
+(function () {
+  var q = location.search || '';
+  var target = 'margo://callback' + q;
+  document.getElementById('go').href = target;
+  document.getElementById('url').value = target;
+  if (/[?&](code|error)=/.test(q)) { location.replace(target); }
+  else { document.getElementById('msg').textContent = 'Lien incomplet : recommence la connexion depuis Margo.'; }
+})();
+</script>
+</body>
+</html>
