@@ -2,20 +2,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Test VibeSearch</title>
+<title>VibeSearch Passerelle</title>
 <body style="font:18px -apple-system,system-ui;padding:24px;background:#0a0920;color:#eee;line-height:1.6">
-<h2>Test VibeSearch (2)</h2>
-<p>1. Ouverture automatique dans 3 secondes d'une adresse <b>différente à chaque fois</b> : <span id="cible" style="color:#8fb8ff"></span></p>
-<p>2. Liens différents à toucher :</p>
+<h2>VibeSearch Passerelle pour Orion</h2>
+<p>Télécharger (touche, puis « Télécharger ») :</p>
 <ul>
-  <li><a style="color:#8fb8ff" href="vibesearch:https://www.lemonde.fr/">Le Monde</a></li>
-  <li><a style="color:#8fb8ff" href="vibesearch:https://www.youtube.com/">YouTube</a></li>
-  <li><a style="color:#8fb8ff" href="vibesearch:https://www.reddit.com/">Reddit</a></li>
-  <li><a style="color:#8fb8ff" href="vibesearch:https://github.com/">GitHub</a></li>
+  <li><a style="color:#8fb8ff" href="VibeSearch-Passerelle-Orion.xpi" download>VibeSearch-Passerelle-Orion.xpi</a> (format Firefox)</li>
+  <li><a style="color:#8fb8ff" href="VibeSearch-Passerelle-Orion.zip" download>VibeSearch-Passerelle-Orion.zip</a> (si le .xpi est grisé)</li>
 </ul>
-<script>
-  var cible = 'https://fr.wikipedia.org/wiki/Special:Random?n=' + Date.now()
-  document.getElementById('cible').textContent = cible
-  setTimeout(function () { location.href = 'vibesearch:' + cible }, 3000)
-</script>
 </body>
