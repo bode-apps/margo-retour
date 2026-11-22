@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>DNSSettings</key>
+      <dict>
+        <key>DNSProtocol</key>
+        <string>HTTPS</string>
+        <key>ServerURL</key>
+        <string>https://dns.adguard-dns.com/dns-query</string>
+        <key>ServerAddresses</key>
+        <array>
+          <string>94.140.14.14</string>
+          <string>94.140.15.15</string>
+          <string>2a10:50c0::ad1:ff</string>
+          <string>2a10:50c0::ad2:ff</string>
+        </array>
+      </dict>
+      <key>PayloadDescription</key>
+      <string>Bloque pubs et traqueurs dans toutes les applis et tous les jeux (AdGuard DNS public, chiffré).</string>
+      <key>PayloadDisplayName</key>
+      <string>Bloqueur Vibe (AdGuard DNS)</string>
+      <key>PayloadIdentifier</key>
+      <string>fr.vibe.dns.adguard.reglages</string>
+      <key>PayloadType</key>
+      <string>com.apple.dnsSettings.managed</string>
+      <key>PayloadUUID</key>
+      <string>7C1D3F0A-5B2E-4E8A-9D61-2A9F4C3B8E17</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+    </dict>
+  </array>
+  <key>PayloadDescription</key>
+  <string>Bloqueur de pubs et de traqueurs pour tout l'iPhone, via le DNS chiffré gratuit d'AdGuard. Pour l'enlever : Réglages › Général › VPN et gestion de l'appareil.</string>
+  <key>PayloadDisplayName</key>
+  <string>Bloqueur Vibe</string>
+  <key>PayloadIdentifier</key>
+  <string>fr.vibe.dns</string>
+  <key>PayloadRemovalDisallowed</key>
+  <false/>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadUUID</key>
+  <string>3E8B2C41-9F6D-4A17-B0C5-6D2E8F1A4B93</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+</dict>
+</plist>

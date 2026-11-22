@@ -2,3 +2,4 @@
 
 *.xpi binary
 *.zip binary
+*.mobileconfig binary
